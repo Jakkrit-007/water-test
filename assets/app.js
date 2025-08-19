@@ -14,7 +14,7 @@ const state = {
 async function loadStations() {
   try {
     // 🔗 เปลี่ยน URL ให้ตรงกับ API จริง
-    const res = await fetch("https://hydro.rid.go.th/api/stations");
+    const res = await fetch("https://app.rid.go.th/reservoir/api/dam/public");
     const stations = await res.json();
 
     state.stations = stations.map(s => ({
